@@ -4,6 +4,7 @@ import java.util.*;
 public class SimpleIO {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
+        System.out.println("Enter the file path: (your code will ask you input again and again until you input right path)");
         String[] s = readFile(sc.next());
         for (int i = 0; i < s.length; i++) {
             String s1 = "";
@@ -39,7 +40,7 @@ public class SimpleIO {
             read.close();
             return lines;
         } catch (FileNotFoundException e) {
-            throw new RuntimeException(e.getMessage());
+            return readFile(sc.next());
         }
     }
 }
