@@ -19,7 +19,7 @@ public class SimpleIO {
                         s1 = s1 + s[i].charAt(j);
                     }
                 }
-                if (s1.equals("the") || s1.equals("THe") || s1.equals("THE") || s1.equals("thE") || s1.equals("tHE") || s1.equals("tHe")) {
+                if (s1.toLowerCase().equals("the")) {
                     cnt++;
                 }
                 System.out.println(s[i] + " [" + cnt + "]");
